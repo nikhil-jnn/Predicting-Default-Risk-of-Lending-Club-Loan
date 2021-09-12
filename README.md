@@ -1,7 +1,3 @@
-# LENDING_CLUB_DEPLOYMENT
-
-***
-
 # Capstone Project- Lending Club
 
 ![Lending Club Logo](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/15afae8a-6480-4844-b1c8-4000464530bd.jpg)
