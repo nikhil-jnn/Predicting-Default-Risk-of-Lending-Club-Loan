@@ -93,34 +93,25 @@ Moreover, some of the features in this dataset are only relevant after loans are
   ![Box Plot of DTI vs  Loan Grade](https://user-images.githubusercontent.com/83585688/132972179-2e4aed21-f1de-4327-ae88-7ac734c0aea5.png)
 
 
-### Box Plot Grouped By Terms:
-
-  •	The  graph        shows   Interest  Rate    on  the  Y axis and term (number of months) on the x axis.
-  •	On X axis-
-    0: 36 months
-    1: 60 months
-  •	Interest    rates  are  based  on  term.  Larger amounts  were  seen  to  be  given  for  higher term. The rate  of interest  associated with them is also high.
- 
- ![Box Plot Grouped By Terms](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/0190fbb2-416d-47e8-95b8-4dcc4e17edad.jpg )
+### Box Plot of Installment value vs. Loan Grade
+  
+  ![Box Plot of Installment value vs  Loan Grade](https://user-images.githubusercontent.com/83585688/132972202-ba080832-56ef-44e6-9c45-381fb5c048e2.png)
 
 
-### Loan Amount with respect to Grades:
 
-  •	The graph is made between loan amount Grades from A to G, for two terms (36 months and 60 months).
-  •	On X axis-
-    0 denotes 36 months
-    1 denotes 60 months
-  •	Higher loan amount are associated with grade for longer terms.
-  •	It can also be observed that marginally equal amount of loan was taken by all the Grades range for same terms.
+### Box Plot of Interest Rate vs. Loan Grade
 
-![Loan Amount with respect to Grades](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/8b7ae079-27d5-44f6-926a-9d280001b330.jpg)
+  ![Box Plot of Interest Rate vs  Loan Grade](https://user-images.githubusercontent.com/83585688/132972206-f07302e9-2b74-4bd8-b5ef-1d0a8f6fc3e0.png)
 
-### Loan Amount vs Term: 
 
-  •	The graph is made between loan amount and the term (number of months) for 3 types of Loan Status- Fully-paid, Charged- off, and Default
-  •	Higher loan amount are associated with longer terms and see higher Charge Offs.
+### Box Plot of Loan Amount vs. Loan Purpose:
 
-![Loan Amount vs Term](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/bb83377e-5617-48f7-90b3-bdc7caa11d2e.jpg)
+  ![Box Plot of Loan Amount vs  Loan Purpose](https://user-images.githubusercontent.com/83585688/132972220-0d3ec983-26a0-45de-b908-ecfc7e1bb166.png)
+
+### Distribution of Installments:
+
+  ![distribution of installments](https://user-images.githubusercontent.com/83585688/132972231-34b1e3bf-eb67-4f69-8c9b-788b46fa6b59.png)
+
 
 ***
 
