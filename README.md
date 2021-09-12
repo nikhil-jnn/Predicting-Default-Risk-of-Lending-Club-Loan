@@ -69,27 +69,33 @@ Moreover, some of the features in this dataset are only relevant after loans are
 ### Key Insights from Data:
 
 • Member id is completely blank.
+
 •	Url column is irrelevant.
+
 •	There are 33 blank entries in the data set.
-•	
-•	
-•	
-•	
-•	
-•	
-•	
-•	
-•	
-•	
-•	
-•	
-•	
-•	
-•	
+
+•	Employee title has 167002 blank entries, which are normal because they might not exist.
+
+• mths_since_last_delinq null values are normal, because they might not exist - make them 0
+
+•	mths_since_last_record null values are normal, because they might not exist - make them 0
+
+•	mths_since_last_major_derog make blank as 0
+
+•	annual_inc_joint make the blanks as NA
+
+•	dti_joint make the blanks as NA
+
+•	verification_status_joint make the blanks as NA
+
+•	last payment date blanks are one from whom all amount has been recovered - make them as NA for all the null values
+
+•	Change data type of emp_length, term, earliest_cr_line, last_pymnt_d, last_credit_pull_d
 
 
 ### Average Load Amount vs Grade:
 •	The graph draws a pattern between the loan amount and grade. As the Grade goes down from A to G, the Average Loan Amount linearly increases.
+
 •	Additionally, it can be observed that the average loan amount of B grade loans is the least of all  grades.
 
 
@@ -97,6 +103,7 @@ Moreover, some of the features in this dataset are only relevant after loans are
 ### Loan Status diversification:
 
 •	The count of fully paid is more than the charged off.
+
 •	The dataset is slightly imbalanced and thus was balanced before the model training phase.
 
 ![Loan status values](https://user-images.githubusercontent.com/83585688/132972096-a6d2aa61-77a1-4f42-bf1c-1f2ac605982b.png)
@@ -104,7 +111,8 @@ Moreover, some of the features in this dataset are only relevant after loans are
                
 ### Box Plot for Loan Amount with Grades:
 
-•	It can be inferred from the scenario that larger loans generally appear to be given at a lower grade, with the median loan amount for a grade G loan being almost 5000  higher  than  that    of    a grade A, B, or C loan.
+•	It can be inferred from the scenario that larger loans generally appear to be given at a lower grade, with the median loan amount for a grade G loan being almost 5000  higher      than  that of a grade A, B, or C loan.
+
 •	Grade B, however, remains at the lowest in the range.
 
 
