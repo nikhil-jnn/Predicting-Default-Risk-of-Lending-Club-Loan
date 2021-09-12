@@ -66,6 +66,27 @@ Moreover, some of the features in this dataset are only relevant after loans are
 
 ## EXPLORATORY DATA ANALYSIS:
 
+### Key Insights from Data:
+
+• Member id is completely blank.
+•	Url column is irrelevant.
+•	There are 33 blank entries in the data set.
+•	
+•	
+•	
+•	
+•	
+•	
+•	
+•	
+•	
+•	
+•	
+•	
+•	
+•	
+•	
+
 
 ### Average Load Amount vs Grade:
 •	The graph draws a pattern between the loan amount and grade. As the Grade goes down from A to G, the Average Loan Amount linearly increases.
@@ -85,6 +106,8 @@ Moreover, some of the features in this dataset are only relevant after loans are
 
 •	It can be inferred from the scenario that larger loans generally appear to be given at a lower grade, with the median loan amount for a grade G loan being almost 5000  higher  than  that    of    a grade A, B, or C loan.
 •	Grade B, however, remains at the lowest in the range.
+
+
 ![Box Plot of Installment value vs  Loan Grade](https://user-images.githubusercontent.com/83585688/132972131-a4c3c603-1fc8-4256-8eca-96261b203a6f.png)
 
 
@@ -112,7 +135,12 @@ Moreover, some of the features in this dataset are only relevant after loans are
 
   ![distribution of installments](https://user-images.githubusercontent.com/83585688/132972231-34b1e3bf-eb67-4f69-8c9b-788b46fa6b59.png)
 
+### Interest rate Distribution:
 
+  ![Interest rate distribution](https://user-images.githubusercontent.com/83585688/132972285-d24252db-ea1d-4577-9a9a-62b9935768a3.png)
+
+  
+  
 ***
 
 ### Training The Model:
@@ -121,22 +149,32 @@ Selecting the pivotal determinants from the accepted data frame, 22 specific col
 Columns Selected for Training Model:
 
   	  loan_amt		  zip_code
+  
   	 earliest_cr_line		  open_acc
+  
   	  fico_score		  total_acc
+  
   	  grade		  revol_util
+  
   	  sub_grade		  target
+  
   	  home_ownership		  issue_d
+  
   	  installment		  credit_history
+  
   	  int_rate		  credit_ratio
+  
   	  mort_acc		  installment_ratio
+  
   	  term		  annual_inc
+  
   	  verification_status		  dti
 
 ***
 
 ## Models Used:
 
-### 1.	Random Forest:
+### 1.	Random Forest (TEAM A)
 
 A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting.
 •	Parameters Used
@@ -144,40 +182,14 @@ o	n_estimators : 10 ; defines the number of trees in the forest
 o	random_state=10 ; Controls both the randomness of the bootstrapping of the samples used when building trees and the sampling of the features.
 o	max_depth = 6; 
 
- Individual Account Result Table:
-
-![Individual Account Result Table](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/ef8d4498-2b73-4bcc-9d01-e83fbe17aa2d.jpg)
- 
 
  Joint Account Result Table:
 
 ![Joint Account Result Table](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/f85934a4-5340-4083-9087-f1bed0361b2c.jpg)
 
 
-### 2.	Regularized Logistic Regression:
-
-In the multiclass case, the training algorithm uses the one-vs-rest (OvR) scheme if the ‘multi_class’ option is set to ‘ovr’, and uses the cross-entropy loss if the ‘multi_class’ option is set to ‘multinomial’. This class implements regularized logistic regression using the ‘liblinear’ library, ‘newton-cg’, ‘sag’, ‘saga’ and ‘lbfgs’ solvers. 
-
-•	Parameters Used:
-o	penalty = ‘l2’ ;this is a Ridge regression which adds the squared magnitude of coefficient as penalty term to the loss function.
-o	C = 100; it is the inverse of regularization strength
-o	random_state = 0; 
-
-
-
-
-Individual Account Result Table:
-
-![Individual Account Result Table](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/3583cf0b-2529-46e3-bfd5-09bb163d74bd.jpg)
-
  
-
-Joint Account Result Table:
- 
-![Joint Account Result Table](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/de292774-a3bb-46d4-81f5-dd0f34685991.jpg)
- 
-
-### 3.	Logistic Regression:
+### 2.	Logistic Regression (TEAM B)
 
 In Logistic Regression above performed, if no solver is mentioned i.e. ‘none’ is used, then regression is not applied.
 
@@ -185,211 +197,9 @@ In Logistic Regression above performed, if no solver is mentioned i.e. ‘none�
 o	C = 1;
 o	Solver = ‘none’;
 
-### 4.	KNeighborsClassifier:
+![image](https://user-images.githubusercontent.com/83585688/132972342-a5d1034a-214d-47dc-9dc2-bd60c877fc47.png)
 
-In k-NN, the output is a class membership. An object is assigned to a class that is most common among its k-neighbours.
-•	Parameters used:
-o	n_neighbors = 13; It defines the number of nearest neighbours considered.
-o	P = 2; It is the power parameter. P=2 is used for Euclidean distance.
-o	Metric= ‘euclidean’;
+
 
 ***
 
-## Accuracy for Individual Account:
- 
-![Accuracy for Individual Account](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/9ee63630-5d0c-499f-b7ff-6fece8e294db.jpg)
- 
-
-## Results: 
-
-Table 1. Accuracy For Different Models:
-
-![Accuracy For Different Models](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/7898fff1-aed3-4b1f-94e1-fb24c9275e05.jpg)
-
-
-
-## Conclusion :
-
-Based on the results and the summary tables, Regularized Logistic Regression was selected for predictions ahead.
-
-***
-
-Now, we use flask framework to create a web app for our model.
-
-we have created python file as "app.py" in our root folder. We will start working on web app now,
-
-***
-### Step-1
-
-Initializing Flask object as per following command and importing requried liabraries.
-***
-### Step-2
-
-Now, we load pickle files for Indivisual, Joint and sub grade model.
-***
-### Step-3
-
-After loading all 3 files, we start with creating our web app.
-we have 4 pages in web app, with help of '@app.route()' 
----
-1. Main Page
-    Our home page is pretty simple and plain.
-2. Loand Prediction
-    This page gives 2 option (Individual/Joint) to predict the loan for.
-3. Individual Application
-    Individual page asks for various inputs from the user to predict
-4. Joint Application
-    Joint page asks for various inputs from the user to predict.
-
-***
-### Step-4
-
-***
-
-Now, we take the inputs from user. This step is common for both Individual/Joint type.
-Following is the list for inputs we ask from the user-
-
-* Annual Income
-* Fico score
-* Earliest credit line
-* Zipcode
-* Total account
-* Verification status
-* Term
-* Dti (Debt-to-income ratio)
-* Loan amount
-* MORTGAGE account
-* Open account
-* Revol Util
-* Home Ownership
-
-After getting all the inputs, we do feature engoneering in next step
-***
-
-### Step-5
-
-**Feature Engineering**
- 1. We convert datatype of all the input features to required datatypes to perform further steps.
- 2. Now we calculate _credit ratio_
-    **Credit Ratio = Open account / Total account**
- 3. Calculate the _credit history_ of the applicant
-    **Credit Histoy = Issue date - Earliest credit line**
- 4. Predict _sub grade_ from *Fico score* using a **KNN model**
- 5. With the help of _sub grade_ we decide **Grade**
- 6. Now we calculate **intrest rate** and **EMI** on the basis of _Grade_ and _Loan amount_.
- 7. Calculate **Installment Ratio** 
-    **Installment Ratio = EMI / Loan amount**
- 8. Now we merge all the features in one **final** array.
-***
-**Feature Scaling**
- We perform scaling on **Final** array using 'StandardScaler()'
-***
-
-### Step-6
-
-**Model Building**
-We use **Random Forrest** algorithm for our model.
-Now, using _Final_ to train our model on it.
-
-### Step-6
-
-**Model Prediction**
-Now, we use our model to predict the **Output** values.
-
-We predict the loan status with the help of 3 parameters
---
- * DTI
- * Revol Util
- * Output
---
-So, on the basis of these conditions we predict the loan status
- 1. If **dti> 40.0**
-    _loan is denied because your Debt to income is too high_
- 2. If **revol_util>89**
-    _loan is denied because your credit amount usage is too high_
- 3. If **output > 0.43**
-    _ loan is denied, your loan risk probabilty is high_
-
- Else, if all these conditions satisfy, _your loan will be approved_
-
-***
-
-## HEROKU DEPLOYMENT:
-
-
-### Requirements:
-
-Below you will find the requirements and prerequisites for the deployment.
-•	Create account in Heroku
-•	GIT installation
-•	Heroku_CLI_installation
-•	Login to Heroku account
-•	Install gunicorn
-•	Declare app dependencies
-•	Create Procfile
-•	Initialize git inside the project
-•	Create_heroku_app
-•	Add files to the GIT repository and deploy
-•	Browse deployed URL
-•	Download full project
-
-How to make account in Heroku:
-Step 1: To have an account in Heroku you have to login to https://signup.heroku.com/ 
-Step 2: You must fill the mandatory details, as shown in the below screenshot.
-
-![Form for Heroku signup](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/86bcbf27-4b64-4259-8cf6-52078bbc203a.jpg)
-
- 
-Step 3: Once you have verified your email address, you will be able to access the platform.
- 
-![Email Verification](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/cf16a215-e22f-47ef-94b6-2031e0be7a9b.jpg)
-
-
-## How to deploy a model on Heroku platform:
-
-
-### 1.	Login to Heroku from command prompt
-It will ask you to enter email id and password to login. After successful login next screen will show like below:
-
-### 2.	Install gunicorn
-
-Gunicorn is a Python WSGI HTTP Server for UNIX. It allows you to run any Python application concurrently by running multiple Python processes within a single dyno. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resources, and speedy.
- 
- ![Install gunicorn](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/9c761797f49b7bbf1531dff07f0cdd4ac5ece327/Images/Install%20Gunicorn.png)
-
-### 3.	Declare app dependencies
-
-Create requirements.txt file in the root directory of the project by pip freeze command. The requirements.txt file lists all the app dependencies together. When an app is deployed, Heroku reads this file and installs the appropriate Python dependencies using the pip install -r command.
- 
- ![Declare app dependencies](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/9c761797f49b7bbf1531dff07f0cdd4ac5ece327/Images/Declare%20app%20dependencies.png)
- 
-
-### 4.	Create Procfile
-
-The Procfile is always a plain text file that is named Procfile without a file extension in the root directory of the project, to explicitly declare what command should be executed to start your app.
-
-F:\python-projects\flask-projects\flask-app\Procfile
-
-![Declare app dependencies](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/9c761797f49b7bbf1531dff07f0cdd4ac5ece327/Images/Create%20Profile.png)
-
-![Declare app dependencies-2](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/9c761797f49b7bbf1531dff07f0cdd4ac5ece327/Images/fff6b50d-ced6-4b8d-a402-4f2283548bc0.jpg)
-
-
- 
-A Heroku app’s web process type is special: it is the only process type that can receive external HTTP traffic from Heroku’s routers. If your app includes a web server, you should declare it as your app’s web process.
-The first app refers to the filename app.py. The second app refers the instance of Flask which is inside app.py file.
-
-
-### 5.	Initialize git
-
-![Initialize git](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/8bef92b62ec598623c18e2f2321c84984b1b72ea/Images/Initialize%20git.png)
- 
-### 6.	Create Heroku app, add files to GIT and deploy
-
-### 7.	Browse deployed URL:
-
-https://lendingclubloanriskpredict-api.herokuapp.com/
-
-### 8.	Download full project
-
-## Project Link: 
