@@ -2,6 +2,9 @@
 
 ![Lending Club Logo](https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT/blob/287246bbd31c8a37ecbd9f306dc9104ab67029d0/Images/15afae8a-6480-4844-b1c8-4000464530bd.jpg)
 
+#### Hello Everyone, I (Nikhil Jain) got this opportunity to work on this dataset and be a team leader to successfully complete the given task under a fixed time frame under the internship with Technocolabs Pvt. Ltd.
+
+
 ## Introduction
 
 "LendingClub is a US peer-to-peer lending company, headquartered in San Francisco, California. It was the first peer-to-peer lender to register its offerings as securities with the Securities and Exchange Commission (SEC), and to offer loan trading on a secondary market. LendingClub is the world's largest peer-to-peer lending platform." Wikipedia-Lending club
